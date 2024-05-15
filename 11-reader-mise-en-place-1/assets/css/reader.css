@@ -1,0 +1,18 @@
+.reader{
+    background-color: blue;
+}
+aside{
+    background-color: brown;
+}
+[class^="container-reader"]{
+    padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    [class^="container-reader"]{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 650px) {
+    
+}

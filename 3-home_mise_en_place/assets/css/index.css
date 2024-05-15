@@ -1,0 +1,66 @@
+header {
+    background-color: blue;
+    grid-area: header;
+    padding: 20px;
+    font-size: 2.3rem;
+}
+
+#aside-left {
+    background-color: green;
+    grid-area: aside-left;
+}
+
+#aside-right {
+    background-color: brown;
+    grid-area: aside-right;
+}
+
+.content {
+    background-color: gold;
+    grid-area: content;
+}
+
+.container-home {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "aside-left content aside-right";
+}
+
+
+/*********************** MENU ******************************/
+
+
+/*********************** RESPONSIVE *******************************/
+
+@media screen and (min-width:900px) and (max-width: 1300px) {
+    .container-home {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: "content aside-right";
+    }
+    #aside-left {
+        display: none;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 900px) {
+    .container-home {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+    }
+    #aside-left,
+    #aside-right {
+        display: none;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 900px) {
+    .container-home {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+    }
+    #aside-left,
+    #aside-right {
+        display: none;
+    }
+}

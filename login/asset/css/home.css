@@ -1,0 +1,388 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+}
+
+
+header{
+    height: 30px;
+    padding: 20px;
+    font-size: 1.5rem;
+    position: fixed;
+    margin-top: -70px;
+    width: 100%;
+    display: flex;
+    padding-left: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0/ 10%), 0 8px 16px rgb(0 0 0/ 20%);
+        
+}
+#header-left{
+    flex: 1;
+}
+#header-center{
+    flex: 1;
+    justify-content: center;
+}
+#header-right{
+    flex: 1;
+}
+#aside-left{
+    
+    grid-area: aside-left;
+}
+.content{
+    background-color: brown;
+    grid-area: content;
+}
+#aside-right{
+
+    grid-area: aside-right;
+}
+.container-home{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 350px 3fr 300px;
+    grid-template-areas: "aside-left content aside-right";
+}
+/********************************************HEADER*********************************************/
+.logo img{
+    width: 50px;
+}
+
+#header-left, #header-center, #header-right, .user-infos {
+    display: flex;
+    align-items: center;
+}
+#header-left .recherche{
+    flex: 1;
+    position: relative;
+}
+#header-left .recherche i{
+    position: absolute;
+    left: 15px;
+    color: #ccc;
+    font-size: 0.6em;
+    z-index: 1;
+    top: 7px;
+    
+    
+}
+#header-left input{
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    position: relative;
+    bottom: 5px;
+    width: 90%;
+    
+}
+
+#header-center .header-icones{
+    flex: 0 1 100px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+#header-center .header-icones:hover{
+    background-color: #efefef;
+    border-radius: 10px;
+}
+
+#header-right>*{
+    flex: 1;
+    text-align: center;
+
+}
+#header-right .user-infos{
+    position: relative;
+    left: -8px;
+    cursor: pointer;
+}
+#header-right{
+    gap: 5px;
+}
+.header-icones, img{
+    width: 25px;
+}
+#header-right img{
+    border-radius: 50px;
+    width: 30px;
+}
+#header-right .user-name{
+    color: gray;
+    font-size: 0.5em;
+  
+}
+#header-right .header-icon-right img{
+    width: 15px;
+    background-color: #ccc;
+    padding: 10px;
+}
+#header-right .header-icon-right{
+    cursor: pointer;
+}
+#header-right .header-icon-right:hover{
+    background-color: #efefef;
+    border-radius: 10px;
+}
+.header-icones, .header-icon-right{
+    position: relative;
+    left: -20px;
+}
+header .notification{
+    background-color: #fa383e;
+    padding: 5px;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+}
+
+header #header-center .header-icones .notification{
+    top: -5px;
+    left: 30px;
+    
+}
+header #header-right .header-icon-right .notification{
+    top: -10px;
+    right: 5px;
+    
+}
+/******************************ASIDE LEFT********************************/
+.aside-infos{
+    display: flex;
+   margin-top: 6px;
+    cursor: pointer;
+}
+.aside-infos:hover{
+   background-color: #efefef;
+}
+#aside-left{
+    position: relative;
+    left: 15px;
+}
+
+#aside-left .left-items{
+    position: fixed;
+    overflow: hidden;
+    height: 500px;
+    width: 325px;
+}
+#aside-left img{
+    border-radius: 50px;
+    width: 40px;
+    
+}
+#aside-left .user1-name{
+    font-size: 0.8em;
+    font-weight: bold;
+    position: absolute;
+    top: 19px;  
+    left: 45px; 
+    color: black;    
+}
+
+#aside-left .aside-icons .aside-icon{
+    display: flex;
+}
+.aside-icon{
+    position: relative;
+    padding-top: 5px;
+    cursor: pointer;
+    flex: 1;
+}
+.aside-icon:hover{
+    background-color:#efefef;
+    border-radius: 5px;
+}
+.aside-icon .aside-description{
+    font-size: 0.8rem;
+    position: absolute;
+    color: black;
+    padding-left: 5px;
+    top: 17px;
+    left: 35px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+/******************************ASIDE RIGHT********************************/
+#aside-right .right-icon{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+#aside-right .right-icon:hover{
+    background-color: #efefef;
+    border-radius: 10px;
+}
+#aside-right .right-icon img{
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+
+}
+#aside-right .right-icon .status{
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    border: 1 solid #efefef;
+    position: absolute;
+    bottom: 35px;
+    left: 38px;
+}
+#aside-right .right-icon .online{
+    background-color: green;
+}
+#aside-right .right-icon .outline{
+    background-color: grey;
+}
+
+#aside-right .right-icon .right-users-name {
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+#aside-right .right-icons{
+    position: fixed;
+    overflow: scroll;
+    right: 0;
+    padding-right: 10px;
+    padding-top: 5px;
+    height: 500px; 
+    width: 200px; 
+}
+
+/******************************MENU RESPONSIVE********************************/
+@media screen and (min-width: 900px) and (max-width:1000px) {
+    .container-home{
+        grid-template-columns: 2fr 300px ;
+        grid-template-areas: "content aside-right";
+    }
+    #aside-left{
+        display: none;
+    }
+
+    #header-right .user-infos{
+        display: none;
+    }
+    #header-left input{
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    #header-left input:hover{
+        width: 150px;
+        font-size: 0.6rem;
+    }
+    #header-left input ::placeholder{
+       visibility: hidden;
+    }
+    #header-left .recherche i{
+        position: absolute;
+        left: 20px;
+    }
+    #header-left{
+        flex: none;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .container-home{
+        grid-template-columns: 2fr ;
+        grid-template-areas: "content aside-right";
+    }
+    #aside-left{
+        display: none;
+    }
+    #aside-right{
+        display: none;
+    }
+    #header-center .header-icones:nth-child(1),
+    #header-center .header-icones:nth-child(2),
+    #header-center .header-icones:nth-child(3),
+    #header-center .header-icones:nth-child(4),
+    #header-center .header-icones:nth-child(5){
+        display: none;
+    }
+    #header-right .user-infos{
+        display: none;
+    }
+    #header-left input{
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    #header-left input:hover{
+        width: 150px;
+        font-size: 0.6rem;
+    }
+    
+
+}
+@media screen and (max-width: 600px){
+    .container-home{
+        grid-template-columns: 2fr ;
+        grid-template-areas: "content";
+    }
+    #aside-left{
+        display: none;
+    }
+    #aside-right{
+        display: none;
+    }
+    #header-left input{
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    #header-left input:hover{
+        width: 150px;
+        font-size: 0.6rem;
+    }
+
+    
+    #header-right{
+        display: none;
+    }
+    #header-center .header-icones:nth-child(6){
+        display: none;
+    }
+    #header-left input{
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+    }
+    #header-left input ::placeholder{
+       visibility: hidden;
+    }
+    #header-left .recherche i{
+        position: absolute;
+        left: 20px;
+    }
+    #header-left{
+        flex: none;
+    }
+}
